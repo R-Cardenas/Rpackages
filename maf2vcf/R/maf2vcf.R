@@ -27,7 +27,7 @@ maf2vcf <- function(maf){
 
   VCF2 <- VCF %>%
     mutate(INFO = paste0("AF=",AF,"; DP=",DP)) %>%
-    select(!c(AF,DP))
+    dplyr::select(!c(AF,DP))
 
   print("AF and DP added")
 
